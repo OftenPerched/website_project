@@ -13,20 +13,20 @@
         height: 40%;
         width: 40%;
         display: inline-block;
-        box-sizing: border-box;
-        padding: 20px;
+        box-sizing: content-box;
       }
       #left-container {
         background-color: #eee;
-        margin-top: 100px;
+        margin-top: 10px;
       }
       #right-container {
         background-color: #ddd;
-        margin-top: 100px;
+        margin-top: 10px;
+        margin-left: 5%;
       }
       #image-container {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 2px;
       }
       #image-container img {
         max-width: 100%;
@@ -55,11 +55,11 @@
   </head>
   <body>
     <button id="back-button" onclick="window.location.href = 'index.html';">Back</button>
-    <div id="left-container" class="container"></div>
-    <div id="right-container" class="container"></div>
     <div id="image-container">
       <img src="elements/40klogo.png" alt="Logo was gonna be here...">
-    </div>    
+    </div>  
+    <div id="left-container" class="container"></div>
+    <div id="right-container" class="container"></div>    
     <script src="topic-one.js"></script>
   </body>
 </html>
