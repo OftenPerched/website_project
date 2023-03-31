@@ -14,7 +14,6 @@ async function getAccessToken() {
   });
   const data = await response.json();
   return data.access_token;
-
 }
 function fetchLatestPost() {
   const subreddit = 'Warhammer40k';
@@ -54,27 +53,4 @@ function displayPost(post) {
   container.appendChild(postElement);
 }
 
-function fetchLatestPost() {
-  const subreddit = 'Warhammer40k';
-  const url = `https://www.reddit.com/r/${subreddit}/new.json`;
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const post = data.data.children[0].data;
-      const postTitle = post.title;
-      const postUrl = `https://www.reddit.com${post.permalink}`;
-      const postAuthor = post.author;
-
-      const postContainer = document.getElementById('reddit-post');
-      postContainer.innerHTML = `
-        <h2>${postTitle}</h2>
-        <p>Posted by ${postAuthor}</p>
-        <a href="${postUrl}" target="_blank">View Post</a>
-      `;
-    })
-    .catch(error => console.error(error));
-}
-
 fetchLatestPost(); // Call the function when the page loads
-
