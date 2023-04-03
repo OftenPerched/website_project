@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20vh;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
